@@ -22,6 +22,7 @@ setup_colorlogging()
 log = logging.getLogger(__name__)
 
 OUTPUT_DIR = Path("collected_results/mergebench")
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # %%
 

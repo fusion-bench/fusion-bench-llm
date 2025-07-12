@@ -6,21 +6,22 @@
 import logging
 import os
 from collections import defaultdict
+from pathlib import Path
 from typing import Any, Dict, cast
 
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
-from matplotlib.cm import ScalarMappable
-from matplotlib.colors import Normalize
-
 from fusion_bench.utils import load_from_json
 from fusion_bench.utils.rich_utils import setup_colorlogging
+from matplotlib.cm import ScalarMappable
+from matplotlib.colors import Normalize
 
 setup_colorlogging()
 log = logging.getLogger(__name__)
 
+OUTPUT_DIR = Path("collected_results/mergebench")
 
 # %%
 
@@ -213,9 +214,9 @@ models = [
     "MergeBench/gemma-2-2b_safety",
 ]
 results_df = load_results_as_df(models)
-results_df.to_csv("collected_results/gemma-2-2b.csv", index=False)
+results_df.to_csv(OUTPUT_DIR / "gemma-2-2b.csv", index=False)
 plot_heatmap(results_df)
-plt.savefig("collected_results/gemma-2-2b.pdf", bbox_inches="tight")
+plt.savefig(OUTPUT_DIR / "gemma-2-2b.pdf", bbox_inches="tight")
 plt.show()
 
 # %%
@@ -229,9 +230,9 @@ models = [
 ]
 
 results_df = load_results_as_df(models)
-results_df.to_csv("collected_results/gemma-2-2b-it.csv", index=False)
+results_df.to_csv(OUTPUT_DIR / "gemma-2-2b-it.csv", index=False)
 plot_heatmap(results_df)
-plt.savefig("collected_results/gemma-2-2b-it.pdf", bbox_inches="tight")
+plt.savefig(OUTPUT_DIR / "gemma-2-2b-it.pdf", bbox_inches="tight")
 plt.show()
 
 # %%
@@ -245,9 +246,9 @@ models = [
 ]
 
 results_df = load_results_as_df(models)
-results_df.to_csv("collected_results/gemma-2-9b.csv", index=False)
+results_df.to_csv(OUTPUT_DIR / "gemma-2-9b.csv", index=False)
 plot_heatmap(results_df)
-plt.savefig("collected_results/gemma-2-9b.pdf", bbox_inches="tight")
+plt.savefig(OUTPUT_DIR / "gemma-2-9b.pdf", bbox_inches="tight")
 plt.show()
 
 # %%
@@ -261,9 +262,9 @@ models = [
 ]
 
 results_df = load_results_as_df(models)
-results_df.to_csv("collected_results/gemma-2-9b-it.csv", index=False)
+results_df.to_csv(OUTPUT_DIR / "gemma-2-9b-it.csv", index=False)
 plot_heatmap(results_df)
-plt.savefig("collected_results/gemma-2-9b-it.pdf", bbox_inches="tight")
+plt.savefig(OUTPUT_DIR / "gemma-2-9b-it.pdf", bbox_inches="tight")
 plt.show()
 
 # %%
@@ -277,9 +278,9 @@ models = [
 ]
 
 results_df = load_results_as_df(models)
-results_df.to_csv("collected_results/Llama-3.2-3B.csv", index=False)
+results_df.to_csv(OUTPUT_DIR / "Llama-3.2-3B.csv", index=False)
 plot_heatmap(results_df)
-plt.savefig("collected_results/Llama-3.2-3B.pdf", bbox_inches="tight")
+plt.savefig(OUTPUT_DIR / "Llama-3.2-3B.pdf", bbox_inches="tight")
 plt.show()
 
 # %%
@@ -293,9 +294,9 @@ models = [
 ]
 
 results_df = load_results_as_df(models)
-results_df.to_csv("collected_results/Llama-3.2-3B-Instruct.csv", index=False)
+results_df.to_csv(OUTPUT_DIR / "Llama-3.2-3B-Instruct.csv", index=False)
 plot_heatmap(results_df)
-plt.savefig("collected_results/Llama-3.2-3B-Instruct.pdf", bbox_inches="tight")
+plt.savefig(OUTPUT_DIR / "Llama-3.2-3B-Instruct.pdf", bbox_inches="tight")
 plt.show()
 
 # %%
@@ -309,9 +310,9 @@ models = [
 ]
 
 results_df = load_results_as_df(models)
-results_df.to_csv("collected_results/Llama-3.1-8B.csv", index=False)
+results_df.to_csv(OUTPUT_DIR / "Llama-3.1-8B.csv", index=False)
 plot_heatmap(results_df)
-plt.savefig("collected_results/Llama-3.1-8B.pdf", bbox_inches="tight")
+plt.savefig(OUTPUT_DIR / "Llama-3.1-8B.pdf", bbox_inches="tight")
 plt.show()
 
 # %%
@@ -325,9 +326,9 @@ models = [
 ]
 
 results_df = load_results_as_df(models)
-results_df.to_csv("collected_results/Llama-3.1-8B-Instruct.csv", index=False)
+results_df.to_csv(OUTPUT_DIR / "Llama-3.1-8B-Instruct.csv", index=False)
 plot_heatmap(results_df)
-plt.savefig("collected_results/Llama-3.1-8B-Instruct.pdf", bbox_inches="tight")
+plt.savefig(OUTPUT_DIR / "Llama-3.1-8B-Instruct.pdf", bbox_inches="tight")
 plt.show()
 
 # %%

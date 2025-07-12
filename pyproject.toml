@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+authors = [
+    { name = "Anke Tang", email = "tang.anke@foxmail.com" },
+    { name = "Enneng Yang", email = "ennengyang@gmail.com" },
+    { name = "Feihong He", email = "18996341802@163.com" },
+]
+name = "fusion-bench-llm"
+description = "A Comprehensive Benchmark of Deep Model Fusion"
+readme = "README.md"
+version = "0.0.1"
+license = { file = 'LICENSE' }
+requires-python = ">= 3.10"
+dependencies = [
+    "hydra-core",
+    "lightning",
+    "transformers",
+    "datasets",
+    "peft",
+    "huggingface_hub",
+    "matplotlib",
+    "tensorboard",
+    "tqdm",
+    "rich",
+    "scipy",
+    "h5py",
+    "pytest",
+]
+keywords = ["deep learning", "model fusion", "benchmark"]
+
+[project.urls]
+Repository = "https://github.com/fusion-bench/fusion-bench-llm"
+Homepage = "https://github.com/fusion-bench/fusion-bench-llm"
+Issues = "https://github.com/fusion-bench/fusion-bench-llm/issues"
+
+[tool.setuptools]
+include-package-data = true
+package-dir = { "fusion_bench_llm" = "fusion_bench_llm" }
+
+[tool.setuptools.package-data]
+fusion_bench_llm = ['../fusion_bench_llm_config/**/*']
+
+[tool.isort]
+profile = "black"

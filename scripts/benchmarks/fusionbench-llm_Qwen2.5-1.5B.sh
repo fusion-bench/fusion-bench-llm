@@ -7,7 +7,7 @@ source $SCRIPT_DIR/evaluate.sh
 MODELS=(
   "Qwen/Qwen2.5-1.5B"
   "Qwen/Qwen2.5-1.5B-Instruct"
-  "Qwen/Qwen2.5-Math-1.5"
+  "Qwen/Qwen2.5-Math-1.5B"
   "Qwen/Qwen2.5-Coder-1.5B"
 )
 

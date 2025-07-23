@@ -5,19 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "fusion_bench.scripts.cli",
+            "name": "fusion_bench_llm.scripts.cli",
             "type": "debugpy",
             "request": "launch",
-            "module": "fusion_bench.scripts.cli",
+            "module": "fusion_bench_llm.scripts.cli",
             "args": [
-                "--config-path",
-                "${workspaceFolder}/config",
-                "--config-name",
-                "main"
             ],
             "env": {
                 "HYDRA_FULL_ERROR": "1"
             }
+            "justMyCode": false
         },
     ]
 }

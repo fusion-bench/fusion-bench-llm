@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "third_party/fusion_bench"
+		}
+	],
+	"settings": {}
+}

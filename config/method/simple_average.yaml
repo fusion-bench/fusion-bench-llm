@@ -3,3 +3,4 @@ _target_: fusion_bench.method.SimpleAverageForLlama
 # if `merge_backbone` is False, this is equivalent to `SimpleAverageAlgorithm`
 merge_backbone: false
 model_save_path: null
+show_pbar: true

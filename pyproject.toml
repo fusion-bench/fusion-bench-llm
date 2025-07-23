@@ -36,6 +36,9 @@ Repository = "https://github.com/fusion-bench/fusion-bench-llm"
 Homepage = "https://github.com/fusion-bench/fusion-bench-llm"
 Issues = "https://github.com/fusion-bench/fusion-bench-llm/issues"
 
+[project.scripts]
+fusion_bench_llm = "fusion_bench_llm.scripts.cli:main"
+
 [tool.setuptools]
 include-package-data = true
 package-dir = { "fusion_bench_llm" = "fusion_bench_llm" }

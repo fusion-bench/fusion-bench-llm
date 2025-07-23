@@ -19,49 +19,34 @@ A Collection of examples for large language model fusion, based on [FusionBench]
 
 ```bash
 # clone project
-git clone https://github.com/YourGithubName/your-repo-name
-cd your-repo-name
+git clone https://github.com/fusion-bench/fusion-bench-llm
+cd fusion-bench-llm
 
 # [OPTIONAL] create conda environment
-conda create -n myenv python=3.9
-conda activate myenv
+conda create -n fbllm python=3.12
+conda activate fbllm
 
 # install pytorch according to instructions
 # https://pytorch.org/get-started/
 
-# install requirements
-pip install -r requirements.txt
-```
+# 1. install fusion-bench
+pip install fusion-bench
+# or install fusion-bench in edit mode (recommended for development)
+git clone https://github.com/tanganke/fusion_bench
+cd fusion_bench
+pip install -e .
 
-#### Conda
-
-```bash
-# clone project
-git clone https://github.com/YourGithubName/your-repo-name
-cd your-repo-name
-
-# create conda environment and install dependencies
-conda env create -n myenv python=3.12
-
-# activate conda environment
-conda activate myenv
+# 2. install fusion-bench-llm
+cd .. # go back to fusion-bench-llm directory
+pip install -e .
 ```
 
 ## How to run
 
-run my method
-
 ```shell
-fusion_bench \
-    --config-path $PWD/config --config-name main \
+fusion_bench_llm \
     # method=...
     # method.option_1=...
     # modelpool=...
     # ...
-```
-
-or
-
-```shell
-bash scripts/run_experiments.sh
 ```

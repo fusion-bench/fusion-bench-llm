@@ -1,4 +1,3 @@
-fusion-bench>=0.2.3
 numpy
 matplotlib
 scipy

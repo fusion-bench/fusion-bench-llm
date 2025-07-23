@@ -33,8 +33,7 @@ conda activate fbllm
 pip install fusion-bench
 # or install fusion-bench in edit mode (recommended for development)
 git clone https://github.com/tanganke/fusion_bench
-cd fusion_bench
-pip install -e .
+pip install -e fusion_bench
 
 # 2. install fusion-bench-llm
 cd .. # go back to fusion-bench-llm directory

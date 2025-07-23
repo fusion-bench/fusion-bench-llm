@@ -1,3 +1,0 @@
-_target_: src.taskpool.MyTaskPool
-
-print_model_info: true

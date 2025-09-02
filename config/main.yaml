@@ -1,9 +1,10 @@
 defaults:
   - hydra: default
   - fabric: auto
+  - path: default
   # --- Model, Method, Task ---
   - method: simple_average
-  - modelpool: Qwen2.5-1.5B_math_and_coder
+  - modelpool: null
   - taskpool: null
   - _self_
 
@@ -16,5 +17,5 @@ dry_run: false
 print_config: true # Print the configuration to the console
 merged_model_save_path: null # path to save the merged model, use "{log_dir}" to refer to the logger directory, for example `merged_model_save_path=\{log_dir\}/merged_model`
 merged_model_save_kwargs: null
-report_save_path: "{log_dir}/program_report.json" # path to save the result report
+report_save_path: "${path.log_dir}/program_report.json" # path to save the result report
 print_function_call: true # set to false if you don't want to print the details of instantiate calls

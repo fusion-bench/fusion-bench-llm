@@ -1,0 +1,109 @@
+site_name: "FusionBench-LLM"
+nav:
+  - Home:
+      - index.md
+plugins:
+  - search
+  - autorefs
+  - mkdocstrings:
+      enabled: true
+      default_handler: python
+      handlers:
+        python:
+          options:
+            show_source: true
+            show_root_heading: true
+            show_root_toc_entry: false
+            show_root_full_path: false
+            show_root_members_full_path: false
+            show_object_full_path: false
+            group_by_category: true
+            show_submodules: false
+            parameter_headings: false
+            show_bases: true
+            docstring_section_style: list
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            heading_level: 3
+            signature_crossrefs: true
+            show_overloads: true
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 4
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+  - tables
+  - footnotes
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+extra_javascript:
+  - javascripts/mathjax.js
+  - javascripts/polyfill.min.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+extra_css:
+  - _css/mkdocstrings.css
+  - _css/material_extra.css
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/fusion-bench/fusion-bench-llm
+  status:
+    new: Recently added
+    deprecated: Deprecated
+theme:
+  name: material
+  features:
+    - toc.follow
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - navigation.top
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.footer
+    # - navigation.prune
+    - navigation.expand
+    # - navigation.path
+    - navigation.indexes
+    - navigation.sections
+    - search.suggest
+    - search.highlight
+    # - git-authors
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+repo_url: https://github.com/fusion-bench/fusion-bench-llm
+edit_uri: blob/main/docs/
